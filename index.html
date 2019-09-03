@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    var arr = document.URL.match(/character=([0-9]+)/)
+    console.log(arr)
+    var id = arr[1];
+    const Url = "https://rickandmortyapi.com/api/character/"+id
+    fetch(Url)
+    .then(data => {return data.json()})
+    .then(res => {console.log(res)})
+  </script> 
+
+</head>
+
+<body>
+
+<div id="#content"></div>
+
+</body>
+
+</html>
